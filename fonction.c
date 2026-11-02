@@ -107,3 +107,11 @@ void afficher_menu(){
     printf("1. Faire un retrait\n");
     printf("2. Quitter\n");
 }
+
+int saisir_montant()
+{
+    int a = 0;
+    printf("\nSaisissez le montant : ");
+    scanf("%d", &a);
+    return a;
+}

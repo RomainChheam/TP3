@@ -58,9 +58,14 @@ int main()
 
     int choix2 = 0;
     do {
+        int montantDepart = 1000;
+        int saucisse;
         afficher_menu();
         printf("\nVotre choix : ");
         scanf("%d", &choix2);
+        if (choix2 == 1){
+            saucisse = saisir_montant();
+        }
     } while (choix2 != 2);
     return 0;
 }
