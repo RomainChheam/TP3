@@ -65,6 +65,12 @@ int main()
         scanf("%d", &choix2);
         if (choix2 == 1){
             saucisse = saisir_montant();
+            if (montant_valide(saucisse) == 0) 
+            {
+                printf("\nMontant valide\n");
+            }
+        } else if (choix2 != 2){
+            printf("\nChoix invalide");
         }
     } while (choix2 != 2);
     return 0;

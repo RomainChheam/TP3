@@ -15,4 +15,5 @@ void afficherMeilleureNotes(int nombreEleve, int tab[30][3]);
 
 void afficher_menu();
 int saisir_montant();
+int montant_valide(int a);
 #endif
