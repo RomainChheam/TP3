@@ -53,3 +53,15 @@ void saisirNotes(int nombre, int tab[30][3])
         }
     }
 }
+
+void afficherNotes(int nombreEleve, int tab[30][3])
+{
+    printf("\nEleve  C1  C2  C3");
+    int note1, note2, note3;
+    for (int i = 0; i < nombreEleve; i++){
+        note1 = tab[i][0];
+        note2 = tab[i][1];
+        note3 = tab[i][2];
+        printf("\n   %d    %d    %d    %d", i+1, note1, note2, note3);
+    }
+}

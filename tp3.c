@@ -28,6 +28,7 @@ int main()
                 }
                 break;
             case 3 :
+                afficherNotes(nombreEleve, tabNote);
                 break;
             case 4 :
                 break;
