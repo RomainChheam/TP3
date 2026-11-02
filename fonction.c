@@ -32,3 +32,24 @@ int saisirNombreEleve()
         } else return choix;
     }
 }
+
+void saisirNotes(int nombre, int tab[30][3])
+{
+    for (int i = 0; i < nombre; i++){
+        printf("Eleve %d :", i+1);
+        for (int j = 0; j < 3; j++){
+            int choix = 1;
+            int ok = 0;
+            while (ok != 1){
+                printf("\n  Note du controle %d (0 a 20): ", j+1);
+                scanf("%d", &choix);
+                if (choix < 0 || choix > 20) {
+                    printf("Choix invalide");
+                } else {
+                    tab[i][j] = choix;
+                    ok = 1;
+                }
+            }
+        }
+    }
+}

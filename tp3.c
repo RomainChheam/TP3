@@ -5,7 +5,10 @@
 int main()
 {
     int choix = -1;
-    int nombreEleve;
+    int tailleTabEleve = 30;
+    int tailleNote = 3;
+    int nombreEleve = 1;
+    int tabNote[tailleTabEleve][tailleNote];
     do {
         afficherMenu();
         choix = lireChoix();
@@ -16,6 +19,13 @@ int main()
                 nombreEleve = saisirNombreEleve();
                 break;
             case 2 :
+                saisirNotes(nombreEleve, tabNote);
+                for (int i = 0; i < nombreEleve; i++){
+                    printf("\n\nEleve %d", i+1);
+                    for (int j = 0; j < tailleNote; j++){
+                        printf("\n  Note %d : %d", j+1, tabNote[i][j]);
+                    }
+                }
                 break;
             case 3 :
                 break;
