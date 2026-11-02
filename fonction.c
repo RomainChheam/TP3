@@ -81,3 +81,12 @@ float calculerMoyenneGenerale(int nombreEleve, int tab[30][3])
     } while (iteration < nombreEleve - 1);
     return total/(float)nombreEleve;
 }
+
+int trouverMeilleureNoteControle(int controle, int nombreEleve, int tab[30][3])
+{
+    int meilleureNote = 0;
+    for (int i = 0; i < nombreEleve; i++){
+        if (meilleureNote < tab[i][controle - 1]) meilleureNote = tab[i][controle - 1];
+    }
+    return meilleureNote;
+}
