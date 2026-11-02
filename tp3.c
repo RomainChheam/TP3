@@ -4,6 +4,11 @@
 
 int main()
 {
-    afficherMenu();
+    int choix;
+    do {
+        afficherMenu();
+        choix = lireChoix();
+    } while (choix != 0);
+
     return 0;
 }
