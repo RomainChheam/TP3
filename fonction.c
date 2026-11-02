@@ -90,3 +90,12 @@ int trouverMeilleureNoteControle(int controle, int nombreEleve, int tab[30][3])
     }
     return meilleureNote;
 }
+
+void afficherMeilleureNotes(int nombreEleve, int tab[30][3])
+{
+    for (int i = 1; i < 4; i++){
+        int best = 0;
+        best = trouverMeilleureNoteControle(i, nombreEleve, tab);
+        printf("\nMeilleure note au controle %d : %d\n", i, best);
+    }
+}

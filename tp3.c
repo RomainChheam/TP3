@@ -46,8 +46,7 @@ int main()
                 printf("Moyenne de la classe : %.2f", moyenneClasse);
                 break;
             case 6 :
-                best = trouverMeilleureNoteControle(1, nombreEleve, tabNote);
-                printf("%d", best);
+                afficherMeilleureNotes(nombreEleve, tabNote);
                 break;
             default :
                 printf("Choix invalide");
