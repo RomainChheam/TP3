@@ -9,6 +9,7 @@ int main()
     int tailleNote = 3;
     int nombreEleve = 1;
     int tabNote[tailleTabEleve][tailleNote];
+    float moyenne;
     do {
         afficherMenu();
         choix = lireChoix();
@@ -31,6 +32,8 @@ int main()
                 afficherNotes(nombreEleve, tabNote);
                 break;
             case 4 :
+                moyenne = calculerMoyenneEleve(nombreEleve, tabNote);
+                printf("Moyenne de l'eleve : %2f", moyenne);
                 break;
             case 5 :
                 break;

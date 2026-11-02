@@ -65,3 +65,11 @@ void afficherNotes(int nombreEleve, int tab[30][3])
         printf("\n   %d    %d    %d    %d", i+1, note1, note2, note3);
     }
 }
+
+float calculerMoyenneEleve(int nombreEleve, int tab[30][3])
+{
+    int choix;
+    printf("Entrez l'indice de l'eleve (1 à %d)", nombreEleve);
+    scanf("%d", &choix);
+    return (float)(tab[choix - 1][0] + tab[choix - 1][1] + tab[choix - 1][2])/(float)3;
+}
