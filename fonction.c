@@ -99,3 +99,11 @@ void afficherMeilleureNotes(int nombreEleve, int tab[30][3])
         printf("\nMeilleure note au controle %d : %d\n", i, best);
     }
 }
+
+// ==============================================================
+
+void afficher_menu(){
+    printf("=== BANQUE - DISTRIBUTEUR ===\n");
+    printf("1. Faire un retrait\n");
+    printf("2. Quitter\n");
+}

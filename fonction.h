@@ -10,4 +10,9 @@ void afficherNotes(int nombreEleve, int tab[30][3]);
 float calculerMoyenneEleve(int nombreEleve, int tab[30][3]);
 float calculerMoyenneGenerale(int nombreEleve, int tab[30][3]);
 void afficherMeilleureNotes(int nombreEleve, int tab[30][3]);
+
+// ================================================================
+
+void afficher_menu();
+
 #endif

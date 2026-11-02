@@ -17,7 +17,7 @@ int main()
         choix = lireChoix();
         switch (choix) {
             case 0 :
-                return 0;
+                break;
             case 1 :
                 nombreEleve = saisirNombreEleve();
                 break;
@@ -53,5 +53,14 @@ int main()
                 break;
         }
     } while (choix != 0);
+
+    /*========================================= EXERCICE 2 ==========================================*/
+
+    int choix2 = 0;
+    do {
+        afficher_menu();
+        printf("\nVotre choix : ");
+        scanf("%d", &choix2);
+    } while (choix2 != 2);
     return 0;
 }
