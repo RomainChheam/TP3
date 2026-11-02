@@ -58,7 +58,6 @@ int main()
 
     int choix2 = 0;
     do {
-        int montantDepart = 1000;
         int saucisse;
         afficher_menu();
         printf("\nVotre choix : ");
@@ -67,10 +66,10 @@ int main()
             saucisse = saisir_montant();
             if (montant_valide(saucisse) == 0) 
             {
-                printf("\nMontant valide\n");
+                calcul_distribution(saucisse);
             }
         } else if (choix2 != 2){
-            printf("\nChoix invalide");
+            printf("\nChoix invalide\n");
         }
     } while (choix2 != 2);
     return 0;

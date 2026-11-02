@@ -124,3 +124,34 @@ int montant_valide(int a){
     }
     return 0;
 }
+
+void calcul_distribution(int a){
+    int cinquante = 0, vingt = 0, dix = 0, cinq = 0;
+    if (a / 50 != 0) {
+        cinquante = a / 50;
+        a = a % 50;
+    }
+    if (a / 20 != 0) {
+        vingt = a / 20;
+        a = a % 20; 
+    }
+    if (a / 10 != 0){
+        dix = a / 10;
+        a = a % 10;
+    }
+    if (a / 5 != 0) {
+        cinq = a / 5;
+    }
+    if (cinquante != 0) {
+        printf("%d billets de 50\n", cinquante);
+    }
+    if (vingt != 0) {
+        printf("%d billets de 20\n", vingt);
+    }
+    if (dix != 0) {
+        printf("%d billets de 10\n", dix);
+    }
+    if (cinq != 0) {
+        printf("%d billets de 5\n", cinq);
+    }
+}
