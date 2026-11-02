@@ -20,3 +20,15 @@ int lireChoix()
     scanf("%d", &choix);
     return choix;
 }
+
+int saisirNombreEleve()
+{
+    int choix = 0;
+    while (choix < 1 || choix > 30) {
+        printf("\nEntrez le nombre d'eleve (1 a 30) : ");
+        scanf("%d", &choix);
+        if (choix < 1 || choix > 30) {
+            printf("Choix invalide");
+        } else return choix;
+    }
+}
