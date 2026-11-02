@@ -9,7 +9,8 @@ int main()
     int tailleNote = 3;
     int nombreEleve = 1;
     int tabNote[tailleTabEleve][tailleNote];
-    float moyenne;
+    int indice = -1;
+    float moyenne, moyenneClasse;
     do {
         afficherMenu();
         choix = lireChoix();
@@ -32,10 +33,16 @@ int main()
                 afficherNotes(nombreEleve, tabNote);
                 break;
             case 4 :
+                while (indice < 1 || indice > nombreEleve){
+                    printf("Entrez l'indice de l'eleve (1 a %d): ", nombreEleve);
+                    scanf("%d", &indice);
+                }
                 moyenne = calculerMoyenneEleve(nombreEleve, tabNote);
-                printf("Moyenne de l'eleve : %2f", moyenne);
+                printf("Moyenne de l'eleve : %.2f", moyenne);
                 break;
             case 5 :
+                moyenneClasse = calculerMoyenneGenerale(nombreEleve, tabNote);
+                printf("Moyenne de la classe : %.2f", moyenneClasse);
                 break;
             case 6 :
                 break;
@@ -44,6 +51,5 @@ int main()
                 break;
         }
     } while (choix != 0);
-
     return 0;
 }

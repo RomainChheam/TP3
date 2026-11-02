@@ -7,7 +7,7 @@ void afficherMenu()
     printf("\n1. Saisir le nombre d'eleves");
     printf("\n2. Saisir les notes des eleves");
     printf("\n3. Afficher toutes les notes");
-    printf("\n4. Afficher le moyenne d'un eleve");
+    printf("\n4. Afficher la moyenne d'un eleve");
     printf("\n5. Afficher la moyenne generale");
     printf("\n6. Afficher la meilleure note de chaque controle");
     printf("\n0. Quitter");
@@ -66,10 +66,18 @@ void afficherNotes(int nombreEleve, int tab[30][3])
     }
 }
 
-float calculerMoyenneEleve(int nombreEleve, int tab[30][3])
+float calculerMoyenneEleve(int choix, int tab[30][3])
 {
-    int choix;
-    printf("Entrez l'indice de l'eleve (1 à %d)", nombreEleve);
-    scanf("%d", &choix);
     return (float)(tab[choix - 1][0] + tab[choix - 1][1] + tab[choix - 1][2])/(float)3;
+}
+
+float calculerMoyenneGenerale(int nombreEleve, int tab[30][3])
+{
+    float total = 0;
+    int iteration = 0;
+    do{
+        total += calculerMoyenneEleve(iteration + 1, tab);
+        iteration++;
+    } while (iteration < nombreEleve - 1);
+    return total/(float)nombreEleve;
 }
