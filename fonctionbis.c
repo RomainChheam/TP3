@@ -68,3 +68,27 @@ void corpsetoile(int size, int width, int max_height, char tab[max_height][width
         }
     }
 }
+
+void piedetoile(int size, int width, int max_height, char tab[max_height][width])
+{
+    int mid = width / 2;
+    for (int i = 0; i < size; i++)
+    {
+        int gauche = i;
+        int droite = width - 1 - i;
+        if (i == 0)
+        {
+            tab[size + i][gauche] = '*';
+            tab[size + i][droite] = '*';
+        }
+        else
+        {
+            tab[size + i][gauche] = '.';
+            tab[size + i][droite] = '/';
+        }
+    }
+
+
+    // J'ai seulement copié collé l'exercice précédent car je viens de commencer pour les "jambes" de l'étoile
+    // je ne l'ai donc pas mis dans fonction.h ou autre, c'est le dévut de l'étape 6
+}
