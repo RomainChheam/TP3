@@ -18,6 +18,7 @@ int main()
         tab[i][width] = '\0';
     }
     pointe(size, width, max_height, tab);
+    corpsetoile(size, width, max_height, tab);
     affichagetab(max_height, width, tab);
     return 0;
 }
