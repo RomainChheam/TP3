@@ -8,3 +8,16 @@ int asksize()
     scanf("%d", &size);
     return size;
 }
+
+
+void affichagetab(int width, int max_height, char tab[width][max_height])
+{
+    for (int i = 0; i < width; i++)
+    {
+        for (int j = 0; j < max_height && tab[i][j] != '\0'; j++)
+        {
+            printf("%c", tab[i][j]);
+        }
+        printf("\n");
+    }
+}
