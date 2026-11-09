@@ -2,6 +2,7 @@
 #define FONCTIONBIS
 
 int asksize();
-void affichagetab(int width, int max_height, char tab[width][max_height]);
+void affichagetab(int max_height, int width, char tab[max_height][width]);
+void pointe(int size, int width, int max_height, char tab[max_height][width]);
 
 #endif

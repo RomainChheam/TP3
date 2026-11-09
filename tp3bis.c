@@ -6,16 +6,18 @@ int main()
     int size = asksize();
     int width = size * size;
     int max_height = 3 * size - 1;
-    char tab[width][max_height + 1];
+    char tab[max_height][width];
 
-    for (int i = 0; i < width; i++)
+    for (int i = 0; i < max_height; i++)
     {
-        for (int j = 0; j < max_height; j++)
+        for (int j = 0; j < width; j++)
         {
-            tab[i][j] = '1';
+            tab[i][j] = ' ';
         }
 
-        tab[i][max_height] = '\0';
+        tab[i][width] = '\0';
     }
-    affichagetab(width, max_height + 1, tab);
+    pointe(size, width, max_height, tab);
+    affichagetab(max_height, width, tab);
+    return 0;
 }
