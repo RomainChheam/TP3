@@ -72,23 +72,49 @@ void corpsetoile(int size, int width, int max_height, char tab[max_height][width
 void piedetoile(int size, int width, int max_height, char tab[max_height][width])
 {
     int mid = width / 2;
+    int debut_gauche = 3 * (size - 3);
+    int debut_droite = width - 1 - debut_gauche;
+
     for (int i = 0; i < size; i++)
     {
-        int gauche = i;
-        int droite = width - 1 - i;
+        int colonne = 2 * size - 1 + i;
+        int gauche = debut_gauche - i;
+        int droite = debut_droite + i;
+
         if (i == 0)
         {
-            tab[size + i][gauche] = '*';
-            tab[size + i][droite] = '*';
+            tab[colonne][gauche] = '.';
+            tab[colonne][droite] = '.';
+            for (int j = gauche + 1; j < droite; j++)
+            {
+                tab[colonne][j] = 'S';
+            }
         }
         else
         {
-            tab[size + i][gauche] = '.';
-            tab[size + i][droite] = '/';
+            int inter_gauche = mid - 2 * i;
+            int inter_droite = mid + 2 * i;
+
+            tab[colonne][gauche] = '.';
+            tab[colonne][inter_gauche] = '"';
+            for (int j = gauche + 1; j < inter_gauche; j++)
+            {
+                tab[colonne][j] = 'S';
+            }
+
+            tab[colonne][inter_droite] = '"';
+            tab[colonne][droite] = '.';
+            for (int j = inter_droite + 1; j < droite; j++)
+            {
+                tab[colonne][j] = 'S';
+            }
         }
     }
-
-
-    // J'ai seulement copié collé l'exercice précédent car je viens de commencer pour les "jambes" de l'étoile
-    // je ne l'ai donc pas mis dans fonction.h ou autre, c'est le dévut de l'étape 6
+    // Bonjour (ou bonsoir cela dépend de quand vous regardez ça)
+    // J'ai essayé de faire en sorte que les jambes de l'étoile aient un sens, j'ai réussi à bien centrer le tout
+    // Cependant la rendre belle est vrmt pénible, donc j'ai réussi à faire un résultat assez satisfaisant
+    // Après c'est pas très beau, on dirait un chapeau mexicain qui s'est fait pousser des jambes
+    // Ou peut être Patrick l'étoile de mer en tenue de vol je sais pas trop
+    // Tout ça pour dire que le résultat n'est pas très satisfaisant et j'en suis sincèrement désolé
+    /*PS : Moi je la trouve très belle mon étoile même si objectivement c'est pas une étoile*/
 }

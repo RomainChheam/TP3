@@ -19,6 +19,7 @@ int main()
     }
     pointe(size, width, max_height, tab);
     corpsetoile(size, width, max_height, tab);
+    piedetoile(size, width, max_height, tab);
     affichagetab(max_height, width, tab);
     return 0;
 }
